@@ -7,17 +7,9 @@ using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
+    public GameObject Menu1;
+    public GameObject Menu2;
+    public GameObject Canvas;
     public void Exit()
     {
         Application.Quit();
@@ -28,6 +20,14 @@ public class Menu : MonoBehaviour
     }
     public void Settings()
     {
+        Canvas.SetActive(false);
+        Menu2.SetActive(true);
+
+    }
+    public void Back()
+    {
         Canvas.SetActive(true);
+        Menu2.SetActive(false);
+
     }
 }
