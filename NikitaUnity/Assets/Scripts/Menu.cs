@@ -7,9 +7,8 @@ using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour
 {
-    public GameObject Menu1;
-    public GameObject Menu2;
-    public GameObject Canvas;
+    public GameObject MainMenu;
+    public GameObject MenuSettings;
     public void Exit()
     {
         Application.Quit();
@@ -18,16 +17,10 @@ public class Menu : MonoBehaviour
     {
         SceneManager.LoadScene(1);
     }
-    public void Settings()
+    
+    public void SettingsBack()
     {
-        Canvas.SetActive(false);
-        Menu2.SetActive(true);
-
-    }
-    public void Back()
-    {
-        Canvas.SetActive(true);
-        Menu2.SetActive(false);
-
+        MainMenu.SetActive(!MainMenu.activeSelf);
+        MenuSettings.SetActive(!MenuSettings.activeSelf);
     }
 }
