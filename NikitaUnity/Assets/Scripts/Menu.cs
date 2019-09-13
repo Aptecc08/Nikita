@@ -25,5 +25,9 @@ public class Menu : MonoBehaviour
         MainMenu.SetActive(!MainMenu.activeSelf);
         MenuSettings.SetActive(!MenuSettings.activeSelf);
     }
+    public void video()
+    {
+        
+    }
 }
     

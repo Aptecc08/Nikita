@@ -2,31 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Sound : MonoBehaviour
+public class S : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+   
+ 
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-    public class ManageMusic : MonoBehaviour
-    {
+        private static S _instance;
 
-        private static ManageMusic _instance;
-
-        public static ManageMusic instance
+        public static S instance
         {
             get
             {
                 if (_instance == null)
                 {
-                    _instance = GameObject.FindObjectOfType<ManageMusic>();
+                    _instance = GameObject.FindObjectOfType<S>();
 
                     //Tell unity not to destroy this object when loading a new scene!
                     DontDestroyOnLoad(_instance.gameObject);
@@ -68,7 +57,6 @@ public class Sound : MonoBehaviour
         }
         public void Play()
         {
-            this.gameObject.GetComponent<AudioSource>().Play();
+            this.gameObject.GetComponent<S>().Play();
         }
-    }
-}
+ }

@@ -1403,11 +1403,11 @@ MonoBehaviour:
   m_Value: 0
   m_Options:
     m_Options:
-    - m_Text: Option A
+    - m_Text: "\u041D\u0438\u0437\u043A\u043E\u0435"
       m_Image: {fileID: 0}
-    - m_Text: Option B
+    - m_Text: "\u041D\u043E\u0440\u043C\u0430\u043B\u044C\u043D\u043E\u0435"
       m_Image: {fileID: 0}
-    - m_Text: Option C
+    - m_Text: "\u0423\u043B\u044C\u0442\u0440\u0430"
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
@@ -2075,6 +2075,7 @@ GameObject:
   - component: {fileID: 1639722390}
   - component: {fileID: 1639722392}
   - component: {fileID: 1639722393}
+  - component: {fileID: 1639722394}
   m_Layer: 0
   m_Name: Audio Source
   m_TagString: Untagged
@@ -2217,6 +2218,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b08094679c9028c409aab04ef8d4ce65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1639722394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1639722389}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a60bc05d39d0d154f93bd0a162c8bc63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1648642106
