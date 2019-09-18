@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerContriller : MonoBehaviour
 {
-    public GameObject player;
+    public Rigidbody player;
     public int speed = 5;
     public bool right;
 
@@ -21,12 +21,12 @@ public class PlayerContriller : MonoBehaviour
     if (right == true)
         {
             player.transform.Rotate(0, 0, 100 * Time.deltaTime);
-            player.transform.position += transform.forward* speed * Time.deltaTime;
+            player.velocity = new Vector3(0f, 0f,speed * Time.deltaTime);
         }
     else
         {
             player.transform.Rotate(0, 0, 100 * Time.deltaTime);
-            player.transform.position += transform.right * speed * Time.deltaTime;
+            player.velocity = new Vector3(speed * Time.deltaTime,0f, 0f);
         }
         if (Input.GetMouseButtonDown(1))
             click();
