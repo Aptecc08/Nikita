@@ -12,7 +12,7 @@ public class PlayerContriller : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        right = true;
+      right = true;
     }
 
     // Update is called once per frame 
@@ -20,12 +20,12 @@ public class PlayerContriller : MonoBehaviour
     {
     if (right == true)
         {
-            player.transform.Rotate(0, 0, 100 * Time.deltaTime);
+            player.transform.Rotate(100 * Time.deltaTime,0,0, Space.World);
             player.velocity = new Vector3(0f, 0f,speed * Time.deltaTime);
         }
     else
         {
-            player.transform.Rotate(0, 0, 100 * Time.deltaTime);
+            player.transform.Rotate(0, 0, -100 * Time.deltaTime, Space.World);
             player.velocity = new Vector3(speed * Time.deltaTime,0f, 0f);
         }
         if (Input.GetMouseButtonDown(1))
