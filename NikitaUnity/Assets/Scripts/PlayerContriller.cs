@@ -18,7 +18,7 @@ public class PlayerContriller : MonoBehaviour
     // Update is called once per frame 
     void Update()
     {
-    if (right == true)
+    if (right)
         {
             player.transform.Rotate(100 * Time.deltaTime,0,0, Space.World);
             player.velocity = new Vector3(0f, 0f,speed * Time.deltaTime);
