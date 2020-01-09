@@ -31,7 +31,7 @@ public class PlayerContriller : MonoBehaviour
         }
         if (Input.GetMouseButtonDown(1))
             click();
-        if (player.transform.position.y < -3) 
+        if (player.transform.position.y < -1.5) 
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 

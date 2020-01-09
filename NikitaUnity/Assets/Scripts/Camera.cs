@@ -9,8 +9,7 @@ public class Camera : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-     offset = gameObject.transform.position;
-     
+        offset = gameObject.transform.position - player.transform.position;
     }
 
     // Update is called once per frame
