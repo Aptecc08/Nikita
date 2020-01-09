@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerContriller : MonoBehaviour
 {
@@ -30,6 +31,8 @@ public class PlayerContriller : MonoBehaviour
         }
         if (Input.GetMouseButtonDown(1))
             click();
+        if (player.transform.position.y < -3) 
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void click()
