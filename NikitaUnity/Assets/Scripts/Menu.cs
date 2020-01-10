@@ -11,6 +11,7 @@ public class Menu : MonoBehaviour
     public GameObject MainMenu;
     public GameObject MenuSettings;
     public GameObject Sound;
+    
     public void Exit()
     {
         Application.Quit();
