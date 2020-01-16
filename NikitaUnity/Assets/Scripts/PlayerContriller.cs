@@ -75,7 +75,7 @@ public class PlayerContriller : MonoBehaviour
     }
     public void acceleration()
     {
-        if (speed < 330) 
+        if (speed < 300) 
         speed = speed + 1;
     }
 
