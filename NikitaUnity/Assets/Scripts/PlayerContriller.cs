@@ -6,24 +6,26 @@ using UnityEngine.SceneManagement;
 public class PlayerContriller : MonoBehaviour
 {
     public Rigidbody player;
-    public int speed = 5;
+    public int speed;
     public bool right;
     public int x;
     public int y;
     public int z;
     public int napravlenie;
     public GameObject Trassa;
+    public int timex;
 
 
     // Start is called before the first frame update
     void Start()
     {
-      right = true;
+        timex = 1 / speed;
+        right = true;
         x = 3;
         y = -2;
         z = -6;
-        InvokeRepeating("mapx", 1, 1);
-        InvokeRepeating("acceleration", 10, 5);
+        InvokeRepeating("mapx", 1,(0.2f - timex));
+        InvokeRepeating("acceleration", 1, 0.1f);
 
 
     }
@@ -43,7 +45,7 @@ public class PlayerContriller : MonoBehaviour
         }
         if (Input.GetMouseButtonDown(1))
             click();
-        if (player.transform.position.y < -1.5) 
+        if (player.transform.position.y < -1.2) 
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
        
     }
@@ -61,13 +63,20 @@ public class PlayerContriller : MonoBehaviour
         Instantiate(Trassa, new Vector3(x, -2, z), Quaternion.identity);
         napravlenie = Random.Range(1, 3);
         if (napravlenie < 2)
+        {
             x++;
+            timex = 1 / speed;
+        }
         else
+        {
             z++;
+            timex = 1 / speed;
+        }
     }
     public void acceleration()
     {
-        speed = speed + 5;
+        if (speed < 330) 
+        speed = speed + 1;
     }
 
 

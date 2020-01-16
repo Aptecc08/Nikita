@@ -642,13 +642,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1414680510}
-  speed: 30
+  speed: 100
   right: 0
   x: 3
   y: -2
   z: -6
   napravlenie: 0
   Trassa: {fileID: 517328547}
+  timex: 0
 --- !u!1 &2029288131
 GameObject:
   m_ObjectHideFlags: 0
@@ -810,7 +811,7 @@ PrefabInstance:
     - target: {fileID: 5052075822989988898, guid: 3b6b807901958ca4b8074c9f23f5f28a,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3b6b807901958ca4b8074c9f23f5f28a, type: 3}
